@@ -15,8 +15,9 @@ MonoBehaviour:
   initialHealth: 0
   currentHealth: 0
   maxHealth: 0
-  onDamageTakenEvent: {fileID: 0}
+  onDamageTakenEvent: {fileID: 11400000, guid: 342af37c70dac094e8dd7b4b2279a440, type: 2}
   onHeroHealedEvent: {fileID: 0}
   onDeathEvent: {fileID: 0}
-  attack: 0
-  onEnemyStatsChangedEvent: {fileID: 0}
+  currentAttack: 0
+  initialAttack: 0
+  onEnemyStatsChangedEvent: {fileID: 11400000, guid: df9ee2d321bbd894aab30a41a7619300, type: 2}

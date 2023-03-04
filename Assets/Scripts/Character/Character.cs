@@ -13,6 +13,12 @@ public class Character : ScriptableObject
         protected set { currentHealth = value; }
     }
 
+    public int MaxHealth
+    {
+        get { return maxHealth; }
+        protected set { maxHealth = value; }
+    }
+
     [SerializeField] private int initialHealth;
     [SerializeField] private int currentHealth;
     [SerializeField] private int maxHealth;
@@ -25,6 +31,8 @@ public class Character : ScriptableObject
         Health -= value; // subtract value
         onDamageTakenEvent.Raise(); // raise event
 
+        Debug.Log(this.name + " took " + value + " damage");
+
         if(Health == 0) Die(); // if you don't have any more health, you die
     }
 
@@ -34,6 +42,8 @@ public class Character : ScriptableObject
         Health += value; // add value
         if(Health > maxHealth) Health = maxHealth; // prevent exceeding max health
         if(onHeroHealedEvent != null) onHeroHealedEvent.Raise(); // raise event
+
+        Debug.Log(this.name + " was healed to " + Health);
     }
 
     public void Reset() // reset all modified variables on new game
@@ -42,8 +52,11 @@ public class Character : ScriptableObject
         maxHealth = initialHealth; // reset max health
     }
 
+    private void OnEnable() => Reset();
+
     private void Die()
     {
+        Debug.Log(this.name + " died");
         if(onDeathEvent != null) onDeathEvent.Raise(); // raise event
     }
 }

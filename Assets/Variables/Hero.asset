@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223ddefabec44ea458b026d58d6c4bd4, type: 3}
   m_Name: Hero
   m_EditorClassIdentifier: 
-  initialHealth: 0
-  currentHealth: 0
-  maxHealth: 0
-  onDamageTakenEvent: {fileID: 0}
-  onHeroHealedEvent: {fileID: 0}
+  initialHealth: 20
+  currentHealth: 20
+  maxHealth: 20
+  onDamageTakenEvent: {fileID: 11400000, guid: 4b01e61f30f0ebb44b324284d6d5e986, type: 2}
+  onHeroHealedEvent: {fileID: 11400000, guid: 5fbd36d91e10bdd4da5d98f6b96c185f, type: 2}
   onDeathEvent: {fileID: 0}
