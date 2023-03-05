@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DeckDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Deck deck;
+    [SerializeField] private TextMeshProUGUI deckCounter;
+    public void UpdateUI() // is called OnDeckChanged event
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        deckCounter.text = deck.Cards.Count.ToString();
     }
 }

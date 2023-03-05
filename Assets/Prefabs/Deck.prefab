@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2481755442447747117}
   - component: {fileID: 2481755442447747115}
   - component: {fileID: 2481755442447747114}
+  - component: {fileID: 4587994832706852210}
+  - component: {fileID: 1297548222276998512}
   m_Layer: 5
   m_Name: Deck
   m_TagString: Untagged
@@ -77,6 +79,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4587994832706852210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481755442447747116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e0febc385be91499e271c45c541525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
+  deckCounter: {fileID: 2481755443489269684}
+--- !u!114 &1297548222276998512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481755442447747116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5dea71abe40b20a43ae38f7c49898bfb, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4587994832706852210}
+        m_TargetAssemblyTypeName: DeckDisplay, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2481755443489269686
 GameObject:
   m_ObjectHideFlags: 0
