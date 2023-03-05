@@ -12,6 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee45ea17e9a3db44aacab6d9ad625d71, type: 3}
   m_Name: Deck
   m_EditorClassIdentifier: 
-  initialDeck: []
-  fullDeck: []
-  currentDeck: []
+  initialDeck:
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  fullDeck:
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  currentDeck:
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  playedCards: []
+  onDeckChangedEvent: {fileID: 11400000, guid: 5dea71abe40b20a43ae38f7c49898bfb, type: 2}
