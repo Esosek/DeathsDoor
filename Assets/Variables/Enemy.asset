@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c69fffa4f248a49829a690009e218f, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  initialHealth: 0
-  currentHealth: 0
-  maxHealth: 0
+  initialHealth: 20
+  currentHealth: 20
+  maxHealth: 20
   onDamageTakenEvent: {fileID: 11400000, guid: 342af37c70dac094e8dd7b4b2279a440, type: 2}
   onHeroHealedEvent: {fileID: 0}
   onDeathEvent: {fileID: 0}
-  currentAttack: 0
-  initialAttack: 0
+  currentAttack: 4
+  initialAttack: 2
   onEnemyStatsChangedEvent: {fileID: 11400000, guid: df9ee2d321bbd894aab30a41a7619300, type: 2}

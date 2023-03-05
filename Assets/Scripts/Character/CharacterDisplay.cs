@@ -34,7 +34,8 @@ public class CharacterDisplay : MonoBehaviour
 
     public void UpdateMaxHealth() // is called OnHeroMaxHealthChanged
     {
-        maxHealthText.text = character.MaxHealth.ToString();
+        if(maxHealthText == null) return;
+        maxHealthText.text = "Max " + character.MaxHealth.ToString();
         if(healthAnimator != null) healthAnimator.SetTrigger("onChange");
     }
 }
