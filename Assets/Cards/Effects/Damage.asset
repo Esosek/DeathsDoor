@@ -15,3 +15,5 @@ MonoBehaviour:
   effectValue: 2
   effectArt: {fileID: 21300000, guid: 273e13e4ebeaf804f8172d3b67337f71, type: 3}
   ruleText: Damage <value>
+  enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}
+  hero: {fileID: 0}

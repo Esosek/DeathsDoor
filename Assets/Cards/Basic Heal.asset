@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Heal
   m_EditorClassIdentifier: 
   basic: 1
-  cardArt:
-  - {fileID: 21300000, guid: 273e13e4ebeaf804f8172d3b67337f71, type: 3}
+  cardArt: []
   buyCost: 0
   gold: 2
+  effects: []
