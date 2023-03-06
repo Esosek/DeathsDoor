@@ -682,6 +682,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 13.749999}
   m_SizeDelta: {x: 240, y: 82.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &116519134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116519135}
+  - component: {fileID: 116519136}
+  m_Layer: 0
+  m_Name: Combat Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116519135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116519134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2136722766}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &116519136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116519134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145582c577a50f74e832cc2133002b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}
+  hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
+  onCombatResolvedEvent: {fileID: 11400000, guid: d0ac2e899ae2a4bb7aa734223f73a862, type: 2}
 --- !u!1001 &161841697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -931,12 +978,12 @@ GameObject:
   - component: {fileID: 201817905}
   - component: {fileID: 201817904}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &201817903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -954,8 +1001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 125, y: 105}
+  m_AnchoredPosition: {x: 0, y: -8.75}
+  m_SizeDelta: {x: 115, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201817904
 MonoBehaviour:
@@ -970,7 +1017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1812,6 +1859,8 @@ MonoBehaviour:
   draggedCardVariable: {fileID: 11400000, guid: 9afa92ebc371743ba8b4dbed92388589, type: 2}
   draggedCardIndex: {fileID: 11400000, guid: 9a0e261e0da0b47b9b67af170f5eb2aa, type: 2}
   hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
+  deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
+  onCardPlayedEvent: {fileID: 11400000, guid: a3eff5053a72748929e3256cfee60651, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,7 +4185,7 @@ GameObject:
   - component: {fileID: 1668519839}
   - component: {fileID: 1668519838}
   m_Layer: 0
-  m_Name: ----Managers----
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4149,13 +4198,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668519835}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 2136722766}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1668519837
 MonoBehaviour:
@@ -4911,6 +4960,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2136722765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136722766}
+  m_Layer: 0
+  m_Name: ----Managers----
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136722766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136722765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1668519836}
+  - {fileID: 116519135}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140644904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5505,6 +5587,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 897171479}
     m_Modifications:
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 116519136}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResolveCombat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CombatManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6925393489959015484, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
       propertyPath: m_Name
       value: End
