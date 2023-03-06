@@ -3,10 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Damage", menuName = "Card Effect/Damage")]
 public class Damage : Effect 
 {
-    public override void Resolve() // class to be overriden to execute specific behaviour
+    public override void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {
-        base.Resolve();
+        base.Resolve(isPlayed);
         
-        enemy.TakeDamage(Value);
+        if(isPlayed) enemy.TakeDamage(Value);
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Heal", menuName = "Card Effect/Heal")]
 public class Heal : Effect 
 {
-    public override void Resolve() // class to be overriden to execute specific behaviour
+    public override void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {
-        base.Resolve();
+        base.Resolve(isPlayed);
         
-        hero.Heal(Value);
+        if(isPlayed) hero.Heal(Value);
     }
 }

@@ -52,13 +52,13 @@ public class Card : ScriptableObject
         }
     }
 
-    public void Resolve()
+    public void Resolve(bool isPlayed)
     {
         Debug.Log("Card: Resolving effects");
 
         foreach (var effect in Effects)
         {
-            effect.Resolve();
+            effect.Resolve(isPlayed);
         }
     }
 

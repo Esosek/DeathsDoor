@@ -21,8 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
-  - {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
-  - {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
   fullDeck:
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
@@ -38,6 +36,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   playedCards:
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}

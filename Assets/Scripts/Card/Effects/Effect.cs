@@ -26,7 +26,7 @@ public abstract class Effect : ScriptableObject
     [SerializeField] protected Enemy enemy;
     [SerializeField] protected Character hero;
 
-    public virtual void Resolve() // class to be overriden to execute specific behaviour
+    public virtual void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {
         Debug.Log("Resolving " + this.name + " effect");
     }

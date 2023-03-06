@@ -38,7 +38,7 @@ public class Dropzone : MonoBehaviour, IDropHandler
     protected virtual bool Resolve() // selling overrides default behaviour
     {
         deck.TrackPlayedCard(draggedCardVariable.Card); // track the card played
-        draggedCardVariable.Card.Resolve(); // resolving effect itself
+        draggedCardVariable.Card.Resolve(true); // resolving effect itself
         return true;
     }
 }
