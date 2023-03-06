@@ -30,11 +30,11 @@ public class Hand : ScriptableObject
         onCardDrawEvent.Raise();
     }
 
-    public void RemoveCard(Card card) // to keep track of played or sold cards
+    public void RemoveCard(int index) // to keep track of played or sold cards
     {
-        Debug.Log("Hand: Removing " + card.name + " from Hand");
+        Debug.Log("Hand: Removing card with index " + index + " from Hand");
 
-        Cards.Remove(card);
+        Cards.RemoveAt(index);
     }
 
     public List<Card> DiscardHand()

@@ -52,6 +52,16 @@ public class Card : ScriptableObject
         }
     }
 
+    public void Resolve()
+    {
+        Debug.Log("Card: Resolving effects");
+
+        foreach (var effect in Effects)
+        {
+            effect.Resolve();
+        }
+    }
+
     private void OnEnable() {
         if(!Basic) return; // works for basic cards only
         effects[0].SetValue(effects[0].Value);

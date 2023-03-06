@@ -6,12 +6,20 @@ using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
+    public Card Card
+    {
+        get { return assignedCard; }
+        private set { assignedCard = value; }
+    }
     [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private Image[] art;
     [SerializeField] private TextMeshProUGUI[] ruleText;
+
+    private Card assignedCard; // internal storage of what card was set
     
     public void SetCard(Card card) // is called whenever something creates card visuals (mainly HandDisplay)
     {
+        Card = card;
         goldText.text = card.Gold.ToString(); // set gold text
 
         for (int i = 0; i < card.Art.Count; i++) // render art

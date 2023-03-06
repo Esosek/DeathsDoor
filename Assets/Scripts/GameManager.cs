@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         NewRun();
+        NewFight(); // temporary debugging
     }
 
     public void NewRun()

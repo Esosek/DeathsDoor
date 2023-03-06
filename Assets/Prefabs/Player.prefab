@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354949242273668781}
   - component: {fileID: 9195655374603097983}
+  - component: {fileID: 1878602174680033137}
   - component: {fileID: 8950755555399535301}
   - component: {fileID: 8457776703998854354}
   - component: {fileID: 3665525880980408562}
@@ -137,6 +138,22 @@ MonoBehaviour:
   maxHealthText: {fileID: 354949243672490860}
   attackText: {fileID: 0}
   healthAnimator: {fileID: 0}
+--- !u!114 &1878602174680033137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354949242273668780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d283b3647b7ee44fba773d2830be38f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggedCardVariable: {fileID: 11400000, guid: 9afa92ebc371743ba8b4dbed92388589, type: 2}
+  draggedCardIndex: {fileID: 11400000, guid: 9a0e261e0da0b47b9b67af170f5eb2aa, type: 2}
+  hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
+  onCardPlayedEvent: {fileID: 11400000, guid: a3eff5053a72748929e3256cfee60651, type: 2}
 --- !u!114 &8950755555399535301
 MonoBehaviour:
   m_ObjectHideFlags: 0
