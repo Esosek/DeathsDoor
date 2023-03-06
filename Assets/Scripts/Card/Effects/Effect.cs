@@ -21,6 +21,18 @@ public abstract class Effect : ScriptableObject
         private set { ruleText = value; }
     }
 
+    public List<int> MinTierRolls
+    {
+        get { return minTierRolls; }
+        private set { minTierRolls = value; }
+    }
+
+    public List<int> MaxTierRolls
+    {
+        get { return maxTierRolls; }
+        private set { maxTierRolls = value; }
+    }
+
     [SerializeField] private int effectValue;
     [SerializeField] private Sprite effectArt;
     [SerializeField] private string ruleText;
