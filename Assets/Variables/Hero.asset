@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Hero
   m_EditorClassIdentifier: 
   initialHealth: 20
-  currentHealth: 20
+  currentHealth: -4
   maxHealth: 20
   onDamageTakenEvent: {fileID: 11400000, guid: 4b01e61f30f0ebb44b324284d6d5e986, type: 2}
   onHeroHealedEvent: {fileID: 11400000, guid: 5fbd36d91e10bdd4da5d98f6b96c185f, type: 2}
-  onDeathEvent: {fileID: 0}
+  onDeathEvent: {fileID: 11400000, guid: ed978c4a7e4c1e143916270d50efccb6, type: 2}

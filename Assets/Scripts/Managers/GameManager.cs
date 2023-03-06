@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         deck.ResetToFull();
         hand.ClearHand();
+        goldVariable.SetValue(0); // reset Gold to prevent boosting the shop
         Upkeep();
     }
 
