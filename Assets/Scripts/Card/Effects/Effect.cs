@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public abstract class Effect : ScriptableObject 
 {
@@ -25,6 +26,8 @@ public abstract class Effect : ScriptableObject
     [SerializeField] private string ruleText;
     [SerializeField] protected Enemy enemy;
     [SerializeField] protected Character hero;
+    [SerializeField] private List<int> minTierRolls = new List<int>();
+    [SerializeField] private List<int> maxTierRolls = new List<int>();
 
     public virtual void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {

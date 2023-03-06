@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d45571cd564e14c699d19c15bfba2109, type: 3}
-  m_Name: Heal
+  m_Script: {fileID: 11500000, guid: fce3db83b01199046a5d97da5eaecaed, type: 3}
+  m_Name: Sell Heal
   m_EditorClassIdentifier: 
-  effectValue: 2
-  effectArt: {fileID: 21300000, guid: 1d37a653ef1c1b840bc45e60700361ea, type: 3}
-  ruleText: Heal <value>
+  effectValue: 1
+  effectArt: {fileID: 21300000, guid: 737c78e2ad9429049a20a9830b2880d1, type: 3}
+  ruleText: '<b>Sell</b>: Heal <value>'
   enemy: {fileID: 0}
   hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
-  minTierRolls: 020000000400000006000000080000000b0000000e000000
-  maxTierRolls: 0400000006000000080000000a0000000d00000010000000
+  minTierRolls: 010000000200000003000000040000000600000009000000
+  maxTierRolls: 02000000030000000400000006000000080000000a000000
