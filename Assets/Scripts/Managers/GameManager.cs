@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int upkeepDrawCount = 5;
     [SerializeField] private Deck deck;
     [SerializeField] private Hand hand;
+    [SerializeField] private IntVariable goldVariable;
     private void Start()
     {
         NewRun();
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         deck.NewRun();
         hand.ClearHand();
+        goldVariable.SetValue(0);
     }
     public void DraftPhase()
     {
