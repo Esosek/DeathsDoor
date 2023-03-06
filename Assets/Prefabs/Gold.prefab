@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2493217903546810658}
   - component: {fileID: 3438821466583518657}
+  - component: {fileID: 1201001570226768611}
   - component: {fileID: 3243967120237422253}
   m_Layer: 5
   m_Name: Gold
@@ -130,6 +131,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   goldText: {fileID: 2493217903573154541}
+--- !u!114 &1201001570226768611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493217903546810659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf656bb8cc5d1e44bab9eecc3ea22922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggedCardVariable: {fileID: 11400000, guid: 9afa92ebc371743ba8b4dbed92388589, type: 2}
+  draggedCardIndex: {fileID: 11400000, guid: 9a0e261e0da0b47b9b67af170f5eb2aa, type: 2}
+  hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
+  deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
+  onDropEvent: {fileID: 11400000, guid: 3cc3768d3c0122049810c2b0cac81fc1, type: 2}
+  goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
 --- !u!114 &3243967120237422253
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1669510812742947438}
   - component: {fileID: 3787073119794196476}
   - component: {fileID: 5014315974616605407}
+  - component: {fileID: 3751432950759402571}
   m_Layer: 5
   m_Name: Hand
   m_TagString: Untagged
@@ -153,6 +154,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: a3eff5053a72748929e3256cfee60651, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698261601593743485}
+        m_TargetAssemblyTypeName: HandDisplay, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3751432950759402571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326903666666690650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3cc3768d3c0122049810c2b0cac81fc1, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
