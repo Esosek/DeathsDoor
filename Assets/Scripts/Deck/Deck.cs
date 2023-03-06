@@ -15,6 +15,7 @@ public class Deck : ScriptableObject
     [SerializeField] private List<Card> currentDeck = new List<Card>(); // this changed realtime by drawing cards
     [SerializeField] private List<Card> playedCards = new List<Card>(); // tracks what cards were played to reshuffle them in when needed
     [SerializeField] private GameEvent onDeckChangedEvent;
+    [SerializeField] Hand hand;
    
     public void NewRun()
     {
@@ -29,6 +30,7 @@ public class Deck : ScriptableObject
         Debug.Log("DECK: Reseting Deck to full - including bought cards");
 
         currentDeck = new List<Card>(fullDeck); // reset current deck
+        ShuffleDeck();
         onDeckChangedEvent.Raise();
     }
 
@@ -46,6 +48,7 @@ public class Deck : ScriptableObject
                 ShuffleDeck(); // shuffle it
             }
 
+            if(hand.Cards.Count >= hand.MaxHandSize) break; // prevent over draw
             _cardsToDraw.Add(Cards[0]); // add top card to list that is returned as drawn cards
             currentDeck.RemoveAt(0); // and remove it from current deck
         }

@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
@@ -23,14 +25,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   currentDeck:
-  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
-  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
-  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
   - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
   playedCards: []
   onDeckChangedEvent: {fileID: 11400000, guid: 5dea71abe40b20a43ae38f7c49898bfb, type: 2}
+  hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}

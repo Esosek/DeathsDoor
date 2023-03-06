@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private int upkeepDrawCount = 5;
     [SerializeField] private Deck deck;
-    void Start()
+    [SerializeField] private Hand hand;
+    private void Start()
     {
-        deck.NewRun();
+        NewRun();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NewRun()
     {
-        
+        deck.NewRun();
+        hand.ClearHand();
+    }
+    public void DraftPhase()
+    {
+
+    }
+
+    public void NewFight() // is called OnFightStart event
+    {
+        deck.ResetToFull();
+        hand.ClearHand();
+        Upkeep();
+    }
+
+    public void Upkeep() // is called from NewFight() and OnCombatResolved event
+    {
+        List<Card> _discardedCards = new List<Card>(hand.DiscardHand()); // fist discard all cards from previous turn
+
+        foreach (var card in _discardedCards) // track them in Deck for reshuffling
+        {
+            deck.TrackPlayedCard(card);
+        }
+
+        List<Card> _drawnCards = new List<Card>(deck.DrawCard(upkeepDrawCount)); // get upkeepDrawCount cards from Deck
+
+        foreach (var card in _drawnCards) // push it to Hand
+        {
+            hand.AddCard(card);
+        }
     }
 }

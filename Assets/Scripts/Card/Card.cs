@@ -4,6 +4,12 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")] // to create Basic cards, it's not used otherwise
 public class Card : ScriptableObject 
 {
+    public List<Sprite> Art
+    {
+        get { return cardArt; }
+        private set { cardArt = value; }
+    }
+
     public bool Basic
     {
         get { return basic; }
@@ -44,5 +50,10 @@ public class Card : ScriptableObject
         {
             cardArt.Add(effect.Art);
         }
+    }
+
+    private void OnEnable() {
+        if(!Basic) return; // works for basic cards only
+        effects[0].SetValue(effects[0].Value);
     }
 }

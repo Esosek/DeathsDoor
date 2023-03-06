@@ -37,5 +37,6 @@ public abstract class Effect : ScriptableObject
 
         // replaces value placeholder and set the current rule text
         string _newRuleText = RuleText.Replace("<value>", Value.ToString());
+        RuleText = _newRuleText;
     }
 }

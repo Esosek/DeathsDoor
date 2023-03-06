@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6aeec6cc8b74a408edae491b5319d7, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  effectValue: 2
+  effectValue: 3
   effectArt: {fileID: 21300000, guid: 273e13e4ebeaf804f8172d3b67337f71, type: 3}
   ruleText: Damage <value>
   enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}
