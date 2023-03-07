@@ -39,6 +39,13 @@ public abstract class Effect : ScriptableObject
         private set { secondRollPool = value; }
     }
 
+    public bool SecondRollHigherTier
+    {
+        get { return secondRollHigherTier; }
+        private set { secondRollHigherTier = value; }
+    }
+    
+
     [SerializeField] private int effectValue;
     [SerializeField] private Sprite effectArt;
     [SerializeField] private string ruleText;
@@ -47,6 +54,7 @@ public abstract class Effect : ScriptableObject
     [SerializeField] private List<int> minTierRolls = new List<int>();
     [SerializeField] private List<int> maxTierRolls = new List<int>();
     [SerializeField] private List<Effect> secondRollPool = new List<Effect>();
+    [SerializeField] private bool secondRollHigherTier = false;
     protected Card card;
 
     private string newRuleText;

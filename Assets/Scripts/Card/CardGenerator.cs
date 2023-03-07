@@ -74,8 +74,22 @@ public class CardGenerator : ScriptableObject
 
     private void SecondaryRoll()
     {
-        int _effectIndex = Random.Range(0, secondaryRollEffects.Count); // get random index from all primary effects
-        Effect _effect = secondaryRollEffects[_effectIndex]; // store the effect
+        int _effectIndex;
+        Effect _effect;
+
+        if(primaryEffectSource.SecondRollPool.Count > 0) // has limited rules for second rules
+        {
+            _effectIndex = Random.Range(0, primaryEffectSource.SecondRollPool.Count); // get random index from all primary effects
+            _effect = primaryEffectSource.SecondRollPool[_effectIndex]; // store the effect
+            if(primaryEffectSource.SecondRollHigherTier) tier++; // some primary effects upgrades the tier
+        }
+
+        // if not limits are applied
+        else 
+        {
+            _effectIndex = Random.Range(0, secondaryRollEffects.Count); // get random index from all primary effects
+            _effect = secondaryRollEffects[_effectIndex]; // store the effect
+        }        
 
         if(_effect == primaryEffectSource) // it's a duplicate of primary roll
         {
