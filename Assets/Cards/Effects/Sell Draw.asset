@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a3c1107c5c7498d8be0bde97be4811, type: 3}
   m_Name: Sell Draw
   m_EditorClassIdentifier: 
-  effectValue: 0
-  effectArt: {fileID: 0}
-  ruleText: 
+  effectValue: 1
+  effectArt: {fileID: 21300000, guid: e716fb3fa11f58143b5f981af6de4557, type: 3}
+  ruleText: '<b>Sell</b>: Draw <value>'
   enemy: {fileID: 0}
   hero: {fileID: 0}
-  minTierRolls: 
+  minTierRolls: 010000000200000002000000020000000300000003000000
   maxTierRolls: 
-  deck: {fileID: 0}
-  hand: {fileID: 0}
+  deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
+  hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}

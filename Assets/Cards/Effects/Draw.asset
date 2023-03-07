@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc12b64805d8458c88972b8762f4ca8, type: 3}
   m_Name: Draw
   m_EditorClassIdentifier: 
-  effectValue: 0
-  effectArt: {fileID: 0}
-  ruleText: 
+  effectValue: 1
+  effectArt: {fileID: 21300000, guid: 9a40c921c7a2b3f438e689f1c4180f34, type: 3}
+  ruleText: Draw <value>
   enemy: {fileID: 0}
   hero: {fileID: 0}
-  minTierRolls: 
+  minTierRolls: 010000000100000002000000020000000200000003000000
   maxTierRolls: 
-  deck: {fileID: 0}
-  hand: {fileID: 0}
+  deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
+  hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}

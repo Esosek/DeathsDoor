@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a500e84faa94b4adb9425837294fc321, type: 3}
+  m_Name: Sell Increase Gold
+  m_EditorClassIdentifier: 
+  effectValue: 1
+  effectArt: {fileID: 21300000, guid: 350cee046b6eec149bc93373721f1b74, type: 3}
+  ruleText: '<b>Sell</b>: +<value> Gold on this Card'
+  enemy: {fileID: 0}
+  hero: {fileID: 0}
+  minTierRolls: 010000000200000003000000040000000400000005000000
+  maxTierRolls: 

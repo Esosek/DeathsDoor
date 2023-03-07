@@ -40,6 +40,7 @@ public abstract class Effect : ScriptableObject
     [SerializeField] protected Character hero;
     [SerializeField] private List<int> minTierRolls = new List<int>();
     [SerializeField] private List<int> maxTierRolls = new List<int>();
+    protected Card card;
 
     public virtual void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {
@@ -49,6 +50,11 @@ public abstract class Effect : ScriptableObject
     public void SetValue(int value)
     {
         Value = value;
+    }
+
+    public void StoreCardRef(Card cardRef)
+    {
+        card = cardRef;
     }
 
     public void SetRuleText()

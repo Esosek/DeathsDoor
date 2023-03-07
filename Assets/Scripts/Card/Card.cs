@@ -49,8 +49,15 @@ public class Card : ScriptableObject
         for (int i = 0; i < cardEffects.Count; i++) // fetch card art and effect from generated effects
         {
             cardArt.Add(cardEffects[i].Art);
-            if(Effects.Count == 0 || cardEffects[i] != Effects[0]) Effects.Add(cardEffects[i]);            
+            if(Effects.Count == 0 || cardEffects[i] != Effects[0]) Effects.Add(cardEffects[i]);
+
+            cardEffects[i].StoreCardRef(this); // store referece for some effects            
         }
+    }
+
+    public void AddGold(int value)
+    {
+        Gold += value;
     }
 
     public void Resolve(bool isPlayed)
