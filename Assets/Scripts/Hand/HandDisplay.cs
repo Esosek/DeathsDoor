@@ -23,17 +23,7 @@ public class HandDisplay : MonoBehaviour
             return; // code ends here
         } 
 
-        for (int i = 0; i < _handCountDif; i++) // handles when card is drawn
-        {
-            Card _newCard = hand.Cards[cards.Count]; // get reference of drawn card directly from Hand
-
-            GameObject _newCardObject;
-
-            if(_newCard.Basic) _newCardObject = Instantiate(basicCardPrefab, this.transform);
-            else _newCardObject = Instantiate(cardPrefab, this.transform); // creates new visual object in hand and stores a reference
-            _newCardObject.GetComponent<CardDisplay>().SetCard(_newCard); // fills visual object with data from Hand
-            cards.Add(_newCard); // stores in internal memory for difference count
-        }
+        CardDrawn(_handCountDif);
     }
 
     public void ClearHand() // is called OnHandDiscarded event
@@ -53,5 +43,20 @@ public class HandDisplay : MonoBehaviour
 
         cards.RemoveAt(draggedCardIndex.Value); // removes the card from internal memory
         Destroy(this.transform.GetChild(draggedCardIndex.Value).gameObject); // destroy it's gameObject
+    }
+
+    private void CardDrawn(int handCountDif)
+    {
+        for (int i = 0; i < handCountDif; i++) // handles when card is drawn
+        {
+            Card _newCard = hand.Cards[cards.Count]; // get reference of drawn card directly from Hand
+
+            GameObject _newCardObject;
+
+            if(_newCard.Basic) _newCardObject = Instantiate(basicCardPrefab, this.transform);
+            else _newCardObject = Instantiate(cardPrefab, this.transform); // creates new visual object in hand and stores a reference
+            _newCardObject.GetComponent<CardDisplay>().SetCard(_newCard); // fills visual object with data from Hand
+            cards.Add(_newCard); // stores in internal memory for difference count
+        }
     }
 }

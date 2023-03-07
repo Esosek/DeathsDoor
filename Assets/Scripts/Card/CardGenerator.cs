@@ -22,6 +22,9 @@ public class CardGenerator : ScriptableObject
         Card _newCard = Instantiate(cardObject); // instantiate new card object which is returned after data fill
         GetCurrentTier();
 
+        PrimaryRoll();
+        SecondaryRoll();
+
         List<Effect> _rolledEffects = new List<Effect>();
         _rolledEffects.Add(primaryRoll);
         _rolledEffects.Add(secondaryRoll);
@@ -55,7 +58,35 @@ public class CardGenerator : ScriptableObject
 
     private void PrimaryRoll()
     {
-        Effect _effect = primaryRollEffects[0];
-        primaryRoll = _effect;
+        int _effectIndex = Random.Range(0, primaryRollEffects.Count); // get random index from all primary effects
+        Effect _effect = primaryRollEffects[_effectIndex]; // store the effect
+        primaryRoll = Instantiate(_effect); // internal store for secondary roll
+
+        if(primaryRoll.MaxTierRolls.Count == 0) // check if value needs a roll
+        {
+            primaryRoll.SetValue(primaryRoll.MinTierRolls[tier]);
+        }
+        else // if yes, roll between min and max
+        {
+            int _valueRoll = Random.Range(primaryRoll.MinTierRolls[tier], primaryRoll.MaxTierRolls[tier]);
+            primaryRoll.SetValue(_valueRoll);
+        }
+    }
+
+    private void SecondaryRoll()
+    {
+        int _effectIndex = Random.Range(0, secondaryRollEffects.Count); // get random index from all primary effects
+        Effect _effect = secondaryRollEffects[_effectIndex]; // store the effect
+        secondaryRoll = Instantiate(_effect); // internal store for secondary roll
+
+        if(secondaryRoll.MaxTierRolls.Count == 0) // check if value needs a roll
+        {
+            secondaryRoll.SetValue(primaryRoll.MinTierRolls[tier]);
+        }
+        else // if yes, roll between min and max
+        {
+            int _valueRoll = Random.Range(secondaryRoll.MinTierRolls[tier], secondaryRoll.MaxTierRolls[tier]);
+            secondaryRoll.SetValue(_valueRoll);
+        }
     }
 }

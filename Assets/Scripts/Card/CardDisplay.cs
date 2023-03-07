@@ -30,7 +30,7 @@ public class CardDisplay : MonoBehaviour
 
         for (int i = 0; i < card.Effects.Count; i++) // render rule text
         {
-            if(ruleText[i] == null) return; // prevent rendering if textx are not properly mapped
+            if(ruleText[i] == null) return; // prevent rendering if texts are not properly mapped
             ruleText[i].text = card.Effects[i].RuleText;
         }
     }

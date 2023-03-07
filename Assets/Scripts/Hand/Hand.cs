@@ -19,8 +19,9 @@ public class Hand : ScriptableObject
 
     [SerializeField] private List<Card> cards = new List<Card>(); // cards in Hand
     [SerializeField] private int maxHandSize = 6;
-    [SerializeField] private GameEvent onHandDiscardedEvent;
-    [SerializeField] private GameEvent onCardDrawEvent;
+    [SerializeField] private GameEvent onHandDiscardedEvent;    
+    [SerializeField] private GameEvent onCardDrawEvent;    
+    public CardGenerator cardGen;
    
     public void AddCard(Card card) // GameManager or certain effects calls this when card is drawn
     {

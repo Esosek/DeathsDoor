@@ -49,6 +49,7 @@ public class Card : ScriptableObject
         foreach (var effect in cardEffects) // fetch card art from generated effects
         {
             cardArt.Add(effect.Art);
+            Effects.Add(effect);
         }
     }
 
