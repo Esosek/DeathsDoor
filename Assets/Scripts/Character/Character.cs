@@ -25,6 +25,7 @@ public class Character : ScriptableObject
     [SerializeField] private GameEvent onDamageTakenEvent;
     [SerializeField] private GameEvent onHeroHealedEvent;
     [SerializeField] private GameEvent onDeathEvent;
+    [SerializeField] private GameEvent onMaxHealthChangedEvent;
 
     public void TakeDamage(int value)
     {
@@ -44,6 +45,14 @@ public class Character : ScriptableObject
         if(onHeroHealedEvent != null) onHeroHealedEvent.Raise(); // raise event
 
         Debug.Log(this.name + " was healed to " + Health);
+    }
+
+    public void AddMaxHealth(int value)
+    {
+        MaxHealth += value;
+        if(onMaxHealthChangedEvent != null) onMaxHealthChangedEvent.Raise(); // raise event
+
+        Debug.Log(this.name + " Max Health increased to " + MaxHealth);
     }
 
     public void Reset() // reset all modified variables on new game

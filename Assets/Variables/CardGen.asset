@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73f88bcb5e1bca40a1c28e811656576, type: 3}
   m_Name: CardGen
   m_EditorClassIdentifier: 
-  primaryRollEffects: []
-  secondaryRollEffects: []
+  primaryRollEffects:
+  - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
+  - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
+  secondaryRollEffects:
+  - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
+  - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
   cardObject: {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   minCostValue: 04000000080000000c000000100000001400000018000000

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174a827ab2d57446e903a9932a0dcc23, type: 3}
   m_Name: Hand
   m_EditorClassIdentifier: 
-  cards: []
+  cards:
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: fc14601953bcbae4aa77c5245607b05f, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  - {fileID: 11400000, guid: 4c766f6c93fb1da428accee0dd1a05a4, type: 2}
+  maxHandSize: 6
   onHandDiscardedEvent: {fileID: 11400000, guid: 346c84f6369214082b24a84eee43669f, type: 2}
   onCardDrawEvent: {fileID: 11400000, guid: a6d18d43b422b4e4a973a29bfe460ea6, type: 2}
+  cardGen: {fileID: 11400000, guid: e971e385e3418ac47b23d13e5d14f78e, type: 2}
