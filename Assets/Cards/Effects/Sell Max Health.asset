@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d956e63a88410ab7b5e4552b872b9, type: 3}
   m_Name: Sell Max Health
   m_EditorClassIdentifier: 
-  effectValue: 0
-  effectArt: {fileID: 0}
-  ruleText: 
+  effectValue: 2
+  effectArt: {fileID: 21300000, guid: a74c9b86a942a7647b26df8c4a48c449, type: 3}
+  ruleText: '<b>Sell</b>: +<value> Max Health'
   enemy: {fileID: 0}
-  hero: {fileID: 0}
-  minTierRolls: 
+  hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
+  minTierRolls: 020000000300000004000000050000000600000007000000
   maxTierRolls: 
