@@ -17,8 +17,8 @@ public abstract class Effect : ScriptableObject
 
     public string RuleText
     {
-        get { return ruleText; }
-        private set { ruleText = value; }
+        get { return newRuleText; }
+        private set { newRuleText = value; }
     }
 
     public List<int> MinTierRolls
@@ -33,6 +33,12 @@ public abstract class Effect : ScriptableObject
         private set { maxTierRolls = value; }
     }
 
+    public List<Effect> SecondRollPool
+    {
+        get { return secondRollPool; }
+        private set { secondRollPool = value; }
+    }
+
     [SerializeField] private int effectValue;
     [SerializeField] private Sprite effectArt;
     [SerializeField] private string ruleText;
@@ -40,7 +46,10 @@ public abstract class Effect : ScriptableObject
     [SerializeField] protected Character hero;
     [SerializeField] private List<int> minTierRolls = new List<int>();
     [SerializeField] private List<int> maxTierRolls = new List<int>();
+    [SerializeField] private List<Effect> secondRollPool = new List<Effect>();
     protected Card card;
+
+    private string newRuleText;
 
     public virtual void Resolve(bool isPlayed) // class to be overriden to execute specific behaviour
     {
@@ -60,7 +69,6 @@ public abstract class Effect : ScriptableObject
     public void SetRuleText()
     {
         // replaces value placeholder and set the current rule text
-        string _newRuleText = RuleText.Replace("<value>", Value.ToString());
-        RuleText = _newRuleText;
+        RuleText = ruleText.Replace("<value>", Value.ToString());
     }
 }

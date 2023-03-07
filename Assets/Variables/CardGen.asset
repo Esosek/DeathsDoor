@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryRollEffects:
   - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
-  - {fileID: 11400000, guid: 04b24e09505fc4d4db6b266dce23f767, type: 2}
+  - {fileID: 11400000, guid: bde5cb6e806594a6db7dad98e2c56c61, type: 2}
   secondaryRollEffects:
   - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
   - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
+  - {fileID: 11400000, guid: aefb43012de08f94fb0ddc07479d2784, type: 2}
   cardObject: {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   minCostValue: 04000000080000000c000000100000001400000018000000

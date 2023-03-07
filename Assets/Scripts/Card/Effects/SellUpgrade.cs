@@ -9,7 +9,10 @@ public class SellUpgrade : Effect
         
         if(isPlayed) 
         {
-            
+            // since SellUpgrade have to be primary effect and CardGen limits outcomes of the secondary effect
+            // you may simply add Value to the secondary effect *fingers crossed*
+
+            card.Effects[1].SetValue(card.Effects[1].Value + Value);
         }
     }
 }

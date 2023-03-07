@@ -68,7 +68,7 @@ public class CardGenerator : ScriptableObject
 
         primaryRoll = Instantiate(primaryEffectSource); // internal store for secondary roll
 
-        if(primaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
+        if(primaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
         else primaryRoll.SetValue(RollValue(primaryRoll));
     }
 
@@ -81,7 +81,7 @@ public class CardGenerator : ScriptableObject
         {
             Debug.Log("CardGen: Duplicate effect was generated");
 
-            if(primaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
+            if(primaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
 
             primaryRoll.SetValue(RollValue(primaryRoll) + primaryRoll.Value);
             secondaryRoll = primaryRoll;
@@ -92,7 +92,7 @@ public class CardGenerator : ScriptableObject
 
         secondaryRoll = Instantiate(_effect); // internal store for secondary roll
 
-        if(_secondaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(secondaryRoll)); } // extra gold effect
+        if(_secondaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(secondaryRoll)); } // extra gold effect
 
         secondaryRoll.SetValue(RollValue(secondaryRoll));
     }
