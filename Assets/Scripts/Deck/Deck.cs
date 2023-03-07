@@ -60,6 +60,8 @@ public class Deck : ScriptableObject
     {
         Debug.Log("DECK: Adding new card to Deck");
         fullDeck.Add(newCard); 
+        currentDeck.Add(newCard); // to visually represent that it was addded to your deck
+        onDeckChangedEvent.Raise();
     }
 
     public void TrackPlayedCard(Card newCard) // call this method when playing a card

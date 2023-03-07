@@ -8,10 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Deck deck;
     [SerializeField] private Hand hand;
     [SerializeField] private IntVariable goldVariable;
+    [SerializeField] private GameEvent onGameResetEvent;
+    
     private void Start()
     {
         NewRun();
-        NewFight(); // temporary debugging
     }
 
     public void NewRun()
@@ -19,13 +20,14 @@ public class GameManager : MonoBehaviour
         deck.NewRun();
         hand.ClearHand();
         goldVariable.SetValue(0);
+        onGameResetEvent.Raise();
     }
     public void DraftPhase()
     {
 
     }
 
-    public void NewFight() // is called OnFightStart event
+    public void NewFight() // is called OnFightStart and OnDraftEnd event
     {
         deck.ResetToFull();
         hand.ClearHand();

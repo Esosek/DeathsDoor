@@ -25,6 +25,7 @@ public class Hand : ScriptableObject
    
     public void AddCard(Card card) // GameManager or certain effects calls this when card is drawn
     {
+        if(card == null) Debug.Log("What?");
         Debug.Log("Hand: Adding " + card.name + " to Hand");
 
         Cards.Add(card);
