@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2d652b60c5d4b12bf070b6afda548e, type: 3}
+  m_Name: Spend Gold
+  m_EditorClassIdentifier: 
+  effectValue: 0
+  effectArt: {fileID: 21300000, guid: d66710c4debee4944a11dd6d428a74aa, type: 3}
+  ruleText: Spend <value> Gold
+  enemy: {fileID: 0}
+  hero: {fileID: 0}
+  minTierRolls: 0100000001000000020000000200000004000000
+  maxTierRolls: 0200000002000000030000000300000005000000
+  goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}

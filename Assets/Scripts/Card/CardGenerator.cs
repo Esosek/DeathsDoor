@@ -13,14 +13,18 @@ public class CardGenerator : ScriptableObject
     [SerializeField] private List<int> minGoldValue = new List<int>();
     [SerializeField] private List<int> maxGoldValue = new List<int>();
 
+    // references for special rules
+    [SerializeField] private Effect extraGoldEffect;
+
     private int tier = 0; // 1 - 5 while last tier can be reached only in some effect combos
     private Effect primaryRoll;
     private Effect secondaryRoll;
     private Effect primaryEffectSource; // for consolidating duplicates
+    private Card newCard;
 
     public Card GenerateCard()
     {
-        Card _newCard = Instantiate(cardObject); // instantiate new card object which is returned after data fill
+        newCard = Instantiate(cardObject); // instantiate new card object which is returned after data fill
         GetCurrentTier();
 
         PrimaryRoll();
@@ -30,8 +34,8 @@ public class CardGenerator : ScriptableObject
         _rolledEffects.Add(primaryRoll);
         _rolledEffects.Add(secondaryRoll);
 
-        _newCard.SetCard(RollGold(), RollCost(), _rolledEffects);
-        return _newCard;
+        newCard.SetCard(RollGold(), RollCost(), _rolledEffects);
+        return newCard;
     }
 
     private void GetCurrentTier()
@@ -61,9 +65,11 @@ public class CardGenerator : ScriptableObject
     {
         int _effectIndex = Random.Range(0, primaryRollEffects.Count); // get random index from all primary effects
         primaryEffectSource = primaryRollEffects[_effectIndex]; // store the effect
+
         primaryRoll = Instantiate(primaryEffectSource); // internal store for secondary roll
 
-        primaryRoll.SetValue(RollValue(primaryRoll));
+        if(primaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
+        else primaryRoll.SetValue(RollValue(primaryRoll));
     }
 
     private void SecondaryRoll()
@@ -75,12 +81,18 @@ public class CardGenerator : ScriptableObject
         {
             Debug.Log("CardGen: Duplicate effect was generated");
 
+            if(primaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
+
             primaryRoll.SetValue(RollValue(primaryRoll) + primaryRoll.Value);
             secondaryRoll = primaryRoll;
             return;
         }
 
+        Effect _secondaryEffectSource = _effect; // for extra gold effect
+
         secondaryRoll = Instantiate(_effect); // internal store for secondary roll
+
+        if(_secondaryEffectSource == extraGoldEffect) { Debug.Log("Extra gold proc"); newCard.AddGold(RollValue(secondaryRoll)); } // extra gold effect
 
         secondaryRoll.SetValue(RollValue(secondaryRoll));
     }

@@ -42,7 +42,7 @@ public class Card : ScriptableObject
 
     public void SetCard(int goldValue, int buyCostValue, List<Effect> cardEffects, bool isBasic = false)
     {
-        Gold = goldValue;
+        Gold += goldValue;
         BuyCost = buyCostValue;
         Basic = isBasic;
 
@@ -57,7 +57,9 @@ public class Card : ScriptableObject
 
     public void AddGold(int value)
     {
+        Debug.Log("Adding " + value + " Gold");
         Gold += value;
+        Debug.Log("Adding Gold, new value is " + Gold);
     }
 
     public void Resolve(bool isPlayed)
