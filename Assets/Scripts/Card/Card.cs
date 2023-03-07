@@ -39,6 +39,7 @@ public class Card : ScriptableObject
     [SerializeField] private int buyCost;
     [SerializeField] private int gold;
     [SerializeField] private List<Effect> effects = new List<Effect>();
+    [SerializeField] private IntVariable goldVariable;
 
     public void SetCard(int goldValue, int buyCostValue, List<Effect> cardEffects, bool isBasic = false)
     {
@@ -70,6 +71,8 @@ public class Card : ScriptableObject
         {
             effect.Resolve(isPlayed);
         }
+
+        if(!isPlayed) goldVariable.SetValue(this.Gold + goldVariable.Value); // gain gold
     }
 
     private void OnEnable() {

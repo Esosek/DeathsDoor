@@ -13,19 +13,15 @@ MonoBehaviour:
   m_Name: CardGen
   m_EditorClassIdentifier: 
   primaryRollEffects:
-  - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
   - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
-  - {fileID: 11400000, guid: db56489c82c0c4db6a79d2624691a95a, type: 2}
-  - {fileID: 11400000, guid: 782d3af6992fe4bbabd2d8834d7c4f91, type: 2}
-  - {fileID: 11400000, guid: 15df8ade2769445549e263b6b5d89660, type: 2}
+  - {fileID: 11400000, guid: 04b24e09505fc4d4db6b266dce23f767, type: 2}
   secondaryRollEffects:
-  - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
   - {fileID: 11400000, guid: 0226f722bde4bc74ca89117ffab3cf90, type: 2}
-  - {fileID: 11400000, guid: db56489c82c0c4db6a79d2624691a95a, type: 2}
+  - {fileID: 11400000, guid: 386ff3026b0c45f4bac3070586bb69c6, type: 2}
   cardObject: {fileID: 11400000, guid: 2ca56d488a665d94db42ffc74e51320f, type: 2}
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   minCostValue: 04000000080000000c000000100000001400000018000000
   maxCostValue: 060000000c00000012000000180000001e00000024000000
   minGoldValue: 020000000300000004000000040000000500000007000000
   maxGoldValue: 040000000500000006000000060000000700000008000000
-  extraGoldEffect: {fileID: 0}
+  extraGoldEffect: {fileID: 11400000, guid: db56489c82c0c4db6a79d2624691a95a, type: 2}

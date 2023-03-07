@@ -19,3 +19,4 @@ MonoBehaviour:
   gold: 2
   effects:
   - {fileID: 11400000, guid: 9e56adf88ddb84d95b4d1f24682d6794, type: 2}
+  goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
