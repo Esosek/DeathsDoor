@@ -46,10 +46,10 @@ public class Card : ScriptableObject
         BuyCost = buyCostValue;
         Basic = isBasic;
 
-        foreach (var effect in cardEffects) // fetch card art from generated effects
+        for (int i = 0; i < cardEffects.Count; i++) // fetch card art and effect from generated effects
         {
-            cardArt.Add(effect.Art);
-            Effects.Add(effect);
+            cardArt.Add(cardEffects[i].Art);
+            if(Effects.Count == 0 || cardEffects[i] != Effects[0]) Effects.Add(cardEffects[i]);            
         }
     }
 

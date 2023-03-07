@@ -49,7 +49,10 @@ public abstract class Effect : ScriptableObject
     public void SetValue(int value)
     {
         Value = value;
+    }
 
+    public void SetRuleText()
+    {
         // replaces value placeholder and set the current rule text
         string _newRuleText = RuleText.Replace("<value>", Value.ToString());
         RuleText = _newRuleText;

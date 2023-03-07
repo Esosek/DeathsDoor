@@ -16,6 +16,7 @@ public class CardGenerator : ScriptableObject
     private int tier = 0; // 1 - 5 while last tier can be reached only in some effect combos
     private Effect primaryRoll;
     private Effect secondaryRoll;
+    private Effect primaryEffectSource; // for consolidating duplicates
 
     public Card GenerateCard()
     {
@@ -59,34 +60,41 @@ public class CardGenerator : ScriptableObject
     private void PrimaryRoll()
     {
         int _effectIndex = Random.Range(0, primaryRollEffects.Count); // get random index from all primary effects
-        Effect _effect = primaryRollEffects[_effectIndex]; // store the effect
-        primaryRoll = Instantiate(_effect); // internal store for secondary roll
+        primaryEffectSource = primaryRollEffects[_effectIndex]; // store the effect
+        primaryRoll = Instantiate(primaryEffectSource); // internal store for secondary roll
 
-        if(primaryRoll.MaxTierRolls.Count == 0) // check if value needs a roll
-        {
-            primaryRoll.SetValue(primaryRoll.MinTierRolls[tier]);
-        }
-        else // if yes, roll between min and max
-        {
-            int _valueRoll = Random.Range(primaryRoll.MinTierRolls[tier], primaryRoll.MaxTierRolls[tier]);
-            primaryRoll.SetValue(_valueRoll);
-        }
+        primaryRoll.SetValue(RollValue(primaryRoll));
     }
 
     private void SecondaryRoll()
     {
         int _effectIndex = Random.Range(0, secondaryRollEffects.Count); // get random index from all primary effects
         Effect _effect = secondaryRollEffects[_effectIndex]; // store the effect
+
+        if(_effect == primaryEffectSource) // it's a duplicate of primary roll
+        {
+            Debug.Log("CardGen: Duplicate effect was generated");
+
+            primaryRoll.SetValue(RollValue(primaryRoll) + primaryRoll.Value);
+            secondaryRoll = primaryRoll;
+            return;
+        }
+
         secondaryRoll = Instantiate(_effect); // internal store for secondary roll
 
-        if(secondaryRoll.MaxTierRolls.Count == 0) // check if value needs a roll
+        secondaryRoll.SetValue(RollValue(secondaryRoll));
+    }
+
+    private int RollValue(Effect roll)
+    {
+        if(roll.MaxTierRolls.Count == 0) // check if value needs a roll
         {
-            secondaryRoll.SetValue(primaryRoll.MinTierRolls[tier]);
+            return roll.MinTierRolls[tier];
         }
         else // if yes, roll between min and max
         {
-            int _valueRoll = Random.Range(secondaryRoll.MinTierRolls[tier], secondaryRoll.MaxTierRolls[tier]);
-            secondaryRoll.SetValue(_valueRoll);
+            int _valueRoll = Random.Range(roll.MinTierRolls[tier], roll.MaxTierRolls[tier]);
+            return _valueRoll;
         }
     }
 }

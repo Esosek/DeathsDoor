@@ -31,6 +31,8 @@ public class CardDisplay : MonoBehaviour
         for (int i = 0; i < card.Effects.Count; i++) // render rule text
         {
             if(ruleText[i] == null) return; // prevent rendering if texts are not properly mapped
+            card.Effects[i].SetRuleText();
+            ruleText[i].gameObject.SetActive(true);
             ruleText[i].text = card.Effects[i].RuleText;
         }
     }
