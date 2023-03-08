@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    private void Awake() => instance = this;
+
     [SerializeField] private int upkeepDrawCount = 5;
     [SerializeField] private Deck deck;
     [SerializeField] private Hand hand;
@@ -22,12 +25,8 @@ public class GameManager : MonoBehaviour
         goldVariable.SetValue(0);
         onGameResetEvent.Raise();
     }
-    public void DraftPhase()
-    {
 
-    }
-
-    public void NewFight() // is called OnFightStart and OnDraftEnd event
+    public void NewFight() // is called OnFightStart event
     {
         deck.ResetToFull();
         hand.ClearHand();
@@ -50,5 +49,10 @@ public class GameManager : MonoBehaviour
         {
             hand.AddCard(card);
         }
+    }
+    
+    public void OnFightEnd() // is called OnEnemyDied
+    {
+        deck.ResetToFull();
     }
 }

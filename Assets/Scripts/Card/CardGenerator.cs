@@ -27,6 +27,9 @@ public class CardGenerator : ScriptableObject
         newCard = Instantiate(cardObject); // instantiate new card object which is returned after data fill
         GetCurrentTier();
 
+        int _gold = RollGold(); // roll it before a possible tier upgrade
+        int _cost = RollCost(); // roll it before a possible tier upgrade
+
         PrimaryRoll();
         SecondaryRoll();
 
@@ -34,7 +37,7 @@ public class CardGenerator : ScriptableObject
         _rolledEffects.Add(primaryRoll);
         _rolledEffects.Add(secondaryRoll);
 
-        newCard.SetCard(RollGold(), RollCost(), _rolledEffects);
+        newCard.SetCard(_gold, _cost, _rolledEffects);
         return newCard;
     }
 
@@ -115,7 +118,8 @@ public class CardGenerator : ScriptableObject
     {
         if(roll.MaxTierRolls.Count == 0) // check if value needs a roll
         {
-            return roll.MinTierRolls[tier];
+            if(roll.MinTierRolls.Count <= tier) return 0;
+            else return roll.MinTierRolls[tier];
         }
         else // if yes, roll between min and max
         {

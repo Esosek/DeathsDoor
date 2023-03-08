@@ -28,6 +28,7 @@ public class ShopCard : MonoBehaviour
         deck.AddCard(assignedCard);
         costIcon.SetActive(false);
         soldIcon.SetActive(true);
+        goldVariable.SetValue(goldVariable.Value - assignedCard.BuyCost);
         onCardBoughtEvent.Raise();
     }
 

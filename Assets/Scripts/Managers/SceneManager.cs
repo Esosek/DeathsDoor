@@ -33,5 +33,6 @@ public class SceneManager : MonoBehaviour
         mainCanvas.SetActive(true);
         shopCanvas.SetActive(false);
         draftCanvas.SetActive(false);
+        GameManager.instance.NewFight();
     }
 }
