@@ -3294,6 +3294,7 @@ MonoBehaviour:
   hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   onGameResetEvent: {fileID: 11400000, guid: 0331fc1abcc2a5e429d0a663cd0d0ca6, type: 2}
+  killCountVariable: {fileID: 11400000, guid: b574ac887e9c641c5a272804086181f8, type: 2}
 --- !u!114 &1668519838
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Hand hand;
     [SerializeField] private IntVariable goldVariable;
     [SerializeField] private GameEvent onGameResetEvent;
+    [SerializeField] private IntVariable killCountVariable;
     
     private void Start()
     {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void NewRun()
     {
+        killCountVariable.SetValue(0); // reset kill count
         deck.NewRun();
         hand.ClearHand();
         goldVariable.SetValue(0);
