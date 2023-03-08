@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 50736331}
   - component: {fileID: 50736333}
   - component: {fileID: 50736332}
+  - component: {fileID: 50736334}
   m_Layer: 5
   m_Name: Again
   m_TagString: Untagged
@@ -547,6 +548,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50736330}
   m_CullTransparentMesh: 1
+--- !u!114 &50736334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50736330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 50736332}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1668519837}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NewRun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &55663306
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +689,11 @@ MonoBehaviour:
   enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}
   hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
   onCombatResolvedEvent: {fileID: 11400000, guid: d0ac2e899ae2a4bb7aa734223f73a862, type: 2}
+--- !u!1 &164895361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6925393489959015484, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+  m_PrefabInstance: {fileID: 931707416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168447760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1176,7 @@ MonoBehaviour:
   draftCanvas: {fileID: 1326692713}
   mainCanvas: {fileID: 897171478}
   playerObject: {fileID: 354949243856082325}
+  gameManager: {fileID: 1668519837}
 --- !u!1 &323943355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,7 +1684,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 514031699}
         m_TargetAssemblyTypeName: CharacterDisplay, Assembly-CSharp
-        m_MethodName: UpdateAttack
+        m_MethodName: UpdateStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2686,6 +2749,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 43406311}
     m_Modifications:
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 931707419}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897350146516981899, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6925393489527456999, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
       propertyPath: m_text
       value: Skip
@@ -2785,6 +2864,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6925393489959015485, guid: 312e4aca0e032294492b76f67bb3c11e, type: 3}
   m_PrefabInstance: {fileID: 931707416}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &931707419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164895361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00163382f78a6468aa80570d8741904b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickEvent: {fileID: 11400000, guid: 9fc6613bbeee6214c9b69a70adfa0989, type: 2}
 --- !u!1 &1031631492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,6 +3387,7 @@ MonoBehaviour:
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
   onGameResetEvent: {fileID: 11400000, guid: 0331fc1abcc2a5e429d0a663cd0d0ca6, type: 2}
   killCountVariable: {fileID: 11400000, guid: b574ac887e9c641c5a272804086181f8, type: 2}
+  enemyGen: {fileID: 11400000, guid: 798332731f9eb47a8a3d08166f9eecf1, type: 2}
 --- !u!114 &1668519838
 MonoBehaviour:
   m_ObjectHideFlags: 0

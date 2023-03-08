@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IntVariable goldVariable;
     [SerializeField] private GameEvent onGameResetEvent;
     [SerializeField] private IntVariable killCountVariable;
+    [SerializeField] private EnemyGenerator enemyGen;
     
     private void Start()
     {
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public void NewRun()
     {
+        enemyGen.ResetEnemy();
         killCountVariable.SetValue(0); // reset kill count
         deck.NewRun();
         hand.ClearHand();
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         deck.ResetToFull();
         hand.ClearHand();
         goldVariable.SetValue(0); // reset Gold to prevent boosting the shop
+        enemyGen.GenerateEnemy();
         Upkeep();
     }
 

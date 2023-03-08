@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45571cd564e14c699d19c15bfba2109, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  effectValue: 2
+  effectValue: 1
   effectArt: {fileID: 21300000, guid: 1d37a653ef1c1b840bc45e60700361ea, type: 3}
   ruleText: Heal <value>
   enemy: {fileID: 0}
   hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
   minTierRolls: 020000000400000006000000080000000b0000000e000000
   maxTierRolls: 0400000006000000080000000a0000000d00000010000000
+  secondRollPool: []
+  secondRollHigherTier: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe8db15fe0fb42c7a6b7e289779798b, type: 3}
+  m_Name: EnemyGen
+  m_EditorClassIdentifier: 
+  killCountVariable: {fileID: 11400000, guid: b574ac887e9c641c5a272804086181f8, type: 2}
+  startingAttack: 4
+  startingHealth: 20
+  attackStep: 2
+  healthStep: 10
+  enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}

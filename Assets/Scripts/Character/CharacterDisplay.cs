@@ -12,10 +12,14 @@ public class CharacterDisplay : MonoBehaviour
 
     private void Start() => UpdateAll();
 
+    private void OnEnable() { // to be sure UI is updated on new window open
+        UpdateAll();
+    }
+
     private void UpdateAll()
     {
         UpdateHealth();
-        UpdateAttack();
+        UpdateStats();
         UpdateMaxHealth();
     }
 
@@ -25,11 +29,12 @@ public class CharacterDisplay : MonoBehaviour
         if(healthAnimator != null) healthAnimator.SetTrigger("onChange");
     }
 
-    public void UpdateAttack() // is called OnEnemyAttackChanged
+    public void UpdateStats() // is called OnEnemyStatsChanged
     {
         if(attackText == null) return;
         Enemy enemy = (Enemy) character;
         attackText.text = enemy.Attack.ToString();
+        UpdateHealth();
     }
 
     public void UpdateMaxHealth() // is called OnHeroMaxHealthChanged

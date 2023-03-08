@@ -7,6 +7,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject draftCanvas;
     [SerializeField] private GameObject mainCanvas;
     [SerializeField] private GameObject playerObject;
+    [SerializeField] private GameManager gameManager;
 
     public void ShowShop() // is called OnEnemyDied event
     {
@@ -33,6 +34,6 @@ public class SceneManager : MonoBehaviour
         mainCanvas.SetActive(true);
         shopCanvas.SetActive(false);
         draftCanvas.SetActive(false);
-        GameManager.instance.NewFight();
+        gameManager.NewFight();
     }
 }

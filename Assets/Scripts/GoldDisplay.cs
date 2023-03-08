@@ -10,6 +10,10 @@ public class GoldDisplay : MonoBehaviour
         UpdateUI();
     }
 
+    private void OnEnable() { // updates when new window is opened
+        UpdateUI();
+    }
+
     public void UpdateUI() // is called OnGoldChanged event
     {
         goldText.text = goldVariable.Value.ToString();

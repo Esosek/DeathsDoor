@@ -16,7 +16,7 @@ MonoBehaviour:
   cardArt:
   - {fileID: 21300000, guid: 273e13e4ebeaf804f8172d3b67337f71, type: 3}
   buyCost: 0
-  gold: 2
+  gold: 1
   effects:
   - {fileID: 11400000, guid: aefb43012de08f94fb0ddc07479d2784, type: 2}
   goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
