@@ -15,6 +15,6 @@ MonoBehaviour:
   killCountVariable: {fileID: 11400000, guid: b574ac887e9c641c5a272804086181f8, type: 2}
   startingAttack: 4
   startingHealth: 20
-  attackStep: 2
+  attackStep: 1
   healthStep: 10
   enemy: {fileID: 11400000, guid: c0a9169c94f09314487b2fc9abca07dd, type: 2}

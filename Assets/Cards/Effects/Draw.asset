@@ -17,7 +17,9 @@ MonoBehaviour:
   ruleText: Draw <value>
   enemy: {fileID: 0}
   hero: {fileID: 0}
-  minTierRolls: 010000000100000002000000020000000200000003000000
+  minTierRolls: 01000000010000000100000002000000020000000200000003000000
   maxTierRolls: 
+  secondRollPool: []
+  secondRollHigherTier: 0
   deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
   hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}

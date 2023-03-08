@@ -84,7 +84,7 @@ public class CardGenerator : ScriptableObject
         {
             _effectIndex = Random.Range(0, primaryEffectSource.SecondRollPool.Count); // get random index from all primary effects
             _effect = primaryEffectSource.SecondRollPool[_effectIndex]; // store the effect
-            if(primaryEffectSource.SecondRollHigherTier) tier++; // some primary effects upgrades the tier
+            if(primaryEffectSource.SecondRollHigherTier) tier += 2; // some primary effects upgrades the tier
         }
 
         // if not limits are applied

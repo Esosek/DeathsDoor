@@ -45,7 +45,16 @@ public class DraftManager : MonoBehaviour
         deck.AddCard(pickedCard);
         hand.AddCard(pickedCard); // visualize drafted cards in hand
 
-        if(currentRound == 4) onDraftEndEvent.Raise(); // draft ends
+        if(currentRound == 4)
+        {
+            /*for (int i = 0; i < offerParent.childCount; i++) // clear hand
+            {
+                Destroy(offerParent.GetChild(0));
+            }*/
+            hand.ClearHand();
+
+            onDraftEndEvent.Raise(); // draft ends
+        } 
         else NextRound();
     }
 

@@ -9,4 +9,6 @@ public class DeckDisplay : MonoBehaviour
     {
         deckCounter.text = deck.Cards.Count.ToString();
     }
+
+    private void OnEnable() => UpdateUI();
 }

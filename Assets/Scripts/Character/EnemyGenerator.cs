@@ -18,7 +18,7 @@ public class EnemyGenerator : ScriptableObject
         ResetEnemy(); // first reset to default
 
         // then add upgrade
-        currentAttack = attackStep + currentAttack; // attack is flatly increased by 2
+        currentAttack = killCountVariable.Value * attackStep + startingAttack; // attack is flatly increased by 2
         currentHealth = killCountVariable.Value * healthStep + currentHealth; // whil health scales with kill count
 
         enemy.SetStats(currentAttack, currentHealth); // set Enemy

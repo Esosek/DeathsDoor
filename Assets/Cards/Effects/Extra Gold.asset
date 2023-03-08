@@ -17,5 +17,7 @@ MonoBehaviour:
   ruleText: Extra Gold
   enemy: {fileID: 0}
   hero: {fileID: 0}
-  minTierRolls: 0300000004000000050000000600000007000000
+  minTierRolls: 0200000003000000040000000500000006000000
   maxTierRolls: 
+  secondRollPool: []
+  secondRollHigherTier: 0

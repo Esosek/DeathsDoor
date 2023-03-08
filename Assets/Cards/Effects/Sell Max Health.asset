@@ -17,5 +17,7 @@ MonoBehaviour:
   ruleText: '<b>Sell</b>: +<value> Max Health'
   enemy: {fileID: 0}
   hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
-  minTierRolls: 020000000300000004000000050000000600000007000000
+  minTierRolls: 02000000030000000400000005000000060000000700000008000000
   maxTierRolls: 
+  secondRollPool: []
+  secondRollHigherTier: 0
