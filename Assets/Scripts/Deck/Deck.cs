@@ -22,6 +22,7 @@ public class Deck : ScriptableObject
         Debug.Log("DECK: Restoring deck to default");
 
         fullDeck = new List<Card>(initialDeck); // reset full deck
+        playedCards.Clear();
         ResetToFull();
     }
 
@@ -30,6 +31,7 @@ public class Deck : ScriptableObject
         Debug.Log("DECK: Reseting Deck to full - including bought cards");
 
         currentDeck = new List<Card>(fullDeck); // reset current deck
+        playedCards.Clear();
         ShuffleDeck();
         onDeckChangedEvent.Raise();
     }
