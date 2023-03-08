@@ -8,6 +8,7 @@ public class Dropzone : MonoBehaviour, IDropHandler
     [SerializeField] private Hand hand;
     [SerializeField] private Deck deck;
     [SerializeField] private GameEvent onDropEvent;
+    [SerializeField] protected IntVariable tutorialStepVariable;
 
     public void OnDragStart() // is called OnCardDragStart event
     {
@@ -39,6 +40,10 @@ public class Dropzone : MonoBehaviour, IDropHandler
     {
         deck.TrackPlayedCard(draggedCardVariable.Card); // track the card played
         draggedCardVariable.Card.Resolve(true); // resolving effect itself
+
+        if(tutorialStepVariable.Value == 4) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
+        if(tutorialStepVariable.Value == 7) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
+        
         return true;
     }
 }

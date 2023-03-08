@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private IntVariable killCountVariable;
     [SerializeField] private EnemyGenerator enemyGen;
     [SerializeField] private Character hero;
+    [SerializeField] private GameObject gameBlock;
     
     private void Start()
     {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public void NewRun()
     {
+        gameBlock.SetActive(false);
         hero.Reset();
         enemyGen.ResetEnemy();
         killCountVariable.SetValue(0); // reset kill count
@@ -61,5 +63,10 @@ public class GameManager : MonoBehaviour
     public void OnFightEnd() // is called OnEnemyDied
     {
         deck.ResetToFull();
+    }
+
+    public void OnHeroDied() // is called OnHeroDied
+    {
+        gameBlock.SetActive(true);
     }
 }

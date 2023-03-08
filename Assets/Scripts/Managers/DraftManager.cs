@@ -15,6 +15,7 @@ public class DraftManager : MonoBehaviour
     [SerializeField] private Deck deck;
     [SerializeField] private Hand hand;
     [SerializeField] private GameEvent onDraftEndEvent;
+    [SerializeField] private IntVariable tutorialStepVariable;
 
     private List<GameObject> offeredCardObjects = new List<GameObject>(); // track offered card objects for clear purposes
 
@@ -34,6 +35,8 @@ public class DraftManager : MonoBehaviour
 
     public void NextRound()
     {
+        if(tutorialStepVariable.Value < 4) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
+
         ClearOfferedCards();
         currentRound++;
         SetRoundText();
@@ -47,11 +50,8 @@ public class DraftManager : MonoBehaviour
 
         if(currentRound == 4)
         {
-            /*for (int i = 0; i < offerParent.childCount; i++) // clear hand
-            {
-                Destroy(offerParent.GetChild(0));
-            }*/
             hand.ClearHand();
+            tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
 
             onDraftEndEvent.Raise(); // draft ends
         } 

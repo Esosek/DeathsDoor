@@ -148,7 +148,7 @@ MonoBehaviour:
   hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
   deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
   onDropEvent: {fileID: 11400000, guid: 3cc3768d3c0122049810c2b0cac81fc1, type: 2}
-  goldVariable: {fileID: 11400000, guid: 21218ea4e65c56f4ba2719b6170d72a9, type: 2}
+  tutorialStepVariable: {fileID: 11400000, guid: fa0ed05a9e57cc443a9c49ef38a34f5d, type: 2}
 --- !u!114 &3243967120237422253
 MonoBehaviour:
   m_ObjectHideFlags: 0

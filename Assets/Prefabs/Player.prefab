@@ -155,6 +155,7 @@ MonoBehaviour:
   hand: {fileID: 11400000, guid: aaaf59eb087384fa6837ef9f1abe6417, type: 2}
   deck: {fileID: 11400000, guid: 1383307b9f51c9545a94b489d7c801f4, type: 2}
   onDropEvent: {fileID: 11400000, guid: a3eff5053a72748929e3256cfee60651, type: 2}
+  tutorialStepVariable: {fileID: 11400000, guid: fa0ed05a9e57cc443a9c49ef38a34f5d, type: 2}
 --- !u!114 &8950755555399535301
 MonoBehaviour:
   m_ObjectHideFlags: 0

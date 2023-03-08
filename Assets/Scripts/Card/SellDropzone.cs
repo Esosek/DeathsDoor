@@ -11,6 +11,9 @@ public class SellDropzone : Dropzone
         Debug.Log("Dropzone: Selling card for " + draggedCardVariable.Card.Gold + " Gold");
 
         draggedCardVariable.Card.Resolve(false); // resolving sell effect
+
+        if(tutorialStepVariable.Value == 6) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
+
         return true;
         
     }
