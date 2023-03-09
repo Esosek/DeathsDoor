@@ -25,8 +25,13 @@ public class CharacterDisplay : MonoBehaviour
 
     public void UpdateHealth() // is called OnHeroDamaged, OnHeroHealed and OnEnemyDamaged events
     {
-        healthText.text = character.Health.ToString();
-        if(healthAnimator != null) healthAnimator.SetTrigger("onChange");
+        healthText.text = character.Health.ToString();        
+    }
+
+    public void OnHeal()
+    {   
+        UpdateHealth();
+        if(healthAnimator != null) healthAnimator.SetTrigger("onGain");
     }
 
     public void UpdateStats() // is called OnEnemyStatsChanged
@@ -41,6 +46,5 @@ public class CharacterDisplay : MonoBehaviour
     {
         if(maxHealthText == null) return;
         maxHealthText.text = "Max " + character.MaxHealth.ToString();
-        if(healthAnimator != null) healthAnimator.SetTrigger("onChange");
     }
 }

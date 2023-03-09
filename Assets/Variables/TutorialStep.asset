@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a8ebb8166a6744d83f43b4ca34cafa, type: 3}
   m_Name: TutorialStep
   m_EditorClassIdentifier: 
-  currentValue: 9
+  currentValue: 0
   onChangeEvent: {fileID: 11400000, guid: 5a933601bff259d42a15447fcca202c8, type: 2}
