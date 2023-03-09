@@ -4185,6 +4185,13 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d268517c2194a450f81bafec03fbdbcd, type: 2}
+    source: {fileID: 0}
   musicVolume: 0
   soundVolume: 0
 --- !u!114 &946887424
