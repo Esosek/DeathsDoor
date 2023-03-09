@@ -7,7 +7,7 @@ public class SellUpgrade : Effect
     {
         base.Resolve(isPlayed);
         
-        if(isPlayed) 
+        if(!isPlayed) 
         {
             // since SellUpgrade have to be primary effect and CardGen limits outcomes of the secondary effect
             // you may simply add Value to the secondary effect *fingers crossed*
