@@ -19,5 +19,5 @@ MonoBehaviour:
   onHeroHealedEvent: {fileID: 0}
   onDeathEvent: {fileID: 11400000, guid: 7c1fe50322d14d04293f2138c8db6621, type: 2}
   onMaxHealthChangedEvent: {fileID: 0}
-  currentAttack: 5
+  currentAttack: 18
   onEnemyStatsChangedEvent: {fileID: 11400000, guid: df9ee2d321bbd894aab30a41a7619300, type: 2}

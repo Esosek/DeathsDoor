@@ -14,7 +14,7 @@ public class SellDraw : Effect
         {
             for (int i = 0; i < Value; i++)
             {
-                hand.AddCard(deck.DrawCard()[0]);
+                if(hand.Cards.Count < hand.MaxHandSize) hand.AddCard(deck.DrawCard()[0]);
             }
         }
     }

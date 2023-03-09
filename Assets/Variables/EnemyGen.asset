@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyGen
   m_EditorClassIdentifier: 
   killCountVariable: {fileID: 11400000, guid: b574ac887e9c641c5a272804086181f8, type: 2}
-  startingAttack: 4
+  startingAttack: 3
   startingHealth: 20
   attackStep: 1
   healthStep: 10
