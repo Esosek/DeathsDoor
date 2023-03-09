@@ -28,6 +28,7 @@ public class SceneManager : MonoBehaviour
     {
         draftCanvas.SetActive(true);
         endScreen.SetActive(false);
+        shopCanvas.SetActive(false);
         mainCanvas.SetActive(false);
         playerObject.SetActive(true);
     }
