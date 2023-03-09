@@ -66,6 +66,6 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //Play("Menu Music");
+        Play("Music");
     }
 }

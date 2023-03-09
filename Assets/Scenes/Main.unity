@@ -3361,8 +3361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -18}
-  m_SizeDelta: {x: 50, y: 25}
+  m_AnchoredPosition: {x: -12.410522, y: -18}
+  m_SizeDelta: {x: 65.179, y: 25}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &841170423
 MonoBehaviour:
@@ -3440,7 +3440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mute
+  m_text: Mute Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
   m_sharedMaterial: {fileID: -2448733637917295595, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
@@ -3530,11 +3530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muteTextRef: {fileID: 841170424}
-  muteText: Mute
+  muteText: Mute Music
   unmuteText: Unmute
   audioMixers:
   - {fileID: 24100000, guid: d268517c2194a450f81bafec03fbdbcd, type: 2}
-  - {fileID: 24100000, guid: fba76709915f148d8993b2b76e979df9, type: 2}
 --- !u!1 &897171478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,45 +4150,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Card Sold
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: cdfa6d38ca7c26641b5bd9e6228a18fb, type: 3}
+    volume: 0.65
+    pitch: 1
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
   - name: Card Bought
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: 3966c6fec0a54c141974f72052fde770, type: 3}
+    volume: 0.9
+    pitch: 1
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
   - name: Damage Taken
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: 870aba07c5223ac4d807b670c2078ee9, type: 3}
+    volume: 0.85
+    pitch: 1
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
   - name: On Heal
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: 80a7504870a934c4e90dea28405ba623, type: 3}
+    volume: 0.65
+    pitch: 1
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
   - name: On Death
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: bdf0ab070ba900c48a7fab5ceeee2444, type: 3}
+    volume: 0.7
+    pitch: 1
     loop: 0
     mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
     source: {fileID: 0}
   - name: Music
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
-    loop: 0
+    clip: {fileID: 8300000, guid: b64c624e3180577488ce7350b514b948, type: 3}
+    volume: 0.1
+    pitch: 0.95
+    loop: 1
     mixerGroup: {fileID: 24300002, guid: d268517c2194a450f81bafec03fbdbcd, type: 2}
     source: {fileID: 0}
   musicVolume: 0

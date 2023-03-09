@@ -18,5 +18,6 @@ public class DraftCard : MonoBehaviour
     public void OnPick() // is called onClick
     {
         draftManager.PickCard(assignedCard);
+        AudioManager.instance.Play("Card Bought");
     }
 }
