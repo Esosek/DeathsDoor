@@ -4109,6 +4109,12 @@ GameObject:
   m_Component:
   - component: {fileID: 946887422}
   - component: {fileID: 946887423}
+  - component: {fileID: 946887429}
+  - component: {fileID: 946887428}
+  - component: {fileID: 946887427}
+  - component: {fileID: 946887426}
+  - component: {fileID: 946887425}
+  - component: {fileID: 946887424}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -4143,9 +4149,212 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2cece1c6a2e4b01b807efbbb54ec98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Card Sold
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
+    source: {fileID: 0}
+  - name: Card Bought
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
+    source: {fileID: 0}
+  - name: Damage Taken
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
+    source: {fileID: 0}
+  - name: On Heal
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
+    source: {fileID: 0}
+  - name: On Death
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: fba76709915f148d8993b2b76e979df9, type: 2}
+    source: {fileID: 0}
   musicVolume: 0
   soundVolume: 0
+--- !u!114 &946887424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7c1fe50322d14d04293f2138c8db6621, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On Death
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &946887425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ed978c4a7e4c1e143916270d50efccb6, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On Death
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &946887426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5fbd36d91e10bdd4da5d98f6b96c185f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On Heal
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &946887427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0fbc5ecaa6498b04ea7535f9068d92ff, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Card Bought
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &946887428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 342af37c70dac094e8dd7b4b2279a440, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Damage Taken
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &946887429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946887421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae8b19219830848815233c0da30909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4b01e61f30f0ebb44b324284d6d5e986, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946887423}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Damage Taken
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &974124192
 GameObject:
   m_ObjectHideFlags: 0

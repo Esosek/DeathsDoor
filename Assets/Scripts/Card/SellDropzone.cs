@@ -13,6 +13,7 @@ public class SellDropzone : Dropzone
 
         draggedCardVariable.Card.Resolve(false); // resolving sell effect
         goldAnim.SetTrigger("onGain");
+        AudioManager.instance.Play("Card Sold");
 
         if(tutorialStepVariable.Value == 6) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
 
