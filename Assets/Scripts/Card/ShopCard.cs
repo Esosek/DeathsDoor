@@ -11,6 +11,7 @@ public class ShopCard : MonoBehaviour
     [SerializeField] private Deck deck;
     [SerializeField] private IntVariable goldVariable;
     [SerializeField] GameEvent onCardBoughtEvent;
+    [SerializeField] private IntVariable tutorialStepVariable;
 
     private Card assignedCard;
 
@@ -24,6 +25,8 @@ public class ShopCard : MonoBehaviour
     public void OnBuy() // is called on a single instance when card is bought
     {
         if(goldVariable.Value < assignedCard.BuyCost) return; // you can't afford it
+
+        if(tutorialStepVariable.Value == 8) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1); // tutorial
 
         deck.AddCard(assignedCard);
         costIcon.SetActive(false);

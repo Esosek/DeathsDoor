@@ -12,8 +12,8 @@ public class Tutorial : MonoBehaviour
 
     public void Advance() // is called OnTutorialChanged
     {
-        if(tutorialStepVariable.Value <= tutorialParts.Length) tutorialParts[tutorialStepVariable.Value].SetActive(true);
-        else tutorialParts[tutorialParts.Length].SetActive(false);
+        if(tutorialStepVariable.Value < tutorialParts.Length) tutorialParts[tutorialStepVariable.Value].SetActive(true);
+        else { tutorialParts[tutorialParts.Length - 1].SetActive(false); return; }
         if(tutorialStepVariable.Value != 0) tutorialParts[tutorialStepVariable.Value - 1].SetActive(false);
     }
 }
