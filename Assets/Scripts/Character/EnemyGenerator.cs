@@ -16,19 +16,18 @@ public class EnemyGenerator : ScriptableObject
 
     public void GenerateEnemy()
     {
-        int _enemyCurrentAttack = currentAttack;
         ResetEnemy(); // first reset to default
 
         // adjust attackStep when on killCount 5+
-        if(killCountVariable.Value >= 5) dynamicAttackIncrement++;
+        if(killCountVariable.Value >= 5) dynamicAttackIncrement = dynamicAttackIncrement + killCountVariable.Value - 4;
 
         // then add upgrade
-        currentAttack = (killCountVariable.Value + dynamicAttackIncrement) * attackStep + _enemyCurrentAttack; // attack is flatly increased by 1        
+        currentAttack = killCountVariable.Value * attackStep + currentAttack + dynamicAttackIncrement; // attack is flatly increased by 1        
         currentHealth = killCountVariable.Value * healthStep + currentHealth; // while health scales with kill count
 
         // intended attack values
         // 3,4,5,6,7,8,10,13,17,22,28,35
-        // 3,4,5,6,7,
+        // 3,4,5,6,7,9,x,13
 
         enemy.SetStats(currentAttack, currentHealth); // set Enemy
     }

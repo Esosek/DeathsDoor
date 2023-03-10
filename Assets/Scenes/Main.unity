@@ -1085,7 +1085,6 @@ MonoBehaviour:
   mainCanvas: {fileID: 897171478}
   playerObject: {fileID: 354949243856082325}
   gameManager: {fileID: 1668519837}
-  tutorialStepVariable: {fileID: 11400000, guid: fa0ed05a9e57cc443a9c49ef38a34f5d, type: 2}
 --- !u!1 &256723276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4615,7 +4614,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'This is the Enemy
 
-    and this number is his strenght'
+    and this number is his strength'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
   m_sharedMaterial: {fileID: -2448733637917295595, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
@@ -5224,6 +5223,7 @@ MonoBehaviour:
   enemyGen: {fileID: 11400000, guid: 798332731f9eb47a8a3d08166f9eecf1, type: 2}
   hero: {fileID: 11400000, guid: 5838a85d5b52d6a4fb0baa8e0709a7ea, type: 2}
   gameBlock: {fileID: 1359080352}
+  tutorialStepVariable: {fileID: 11400000, guid: fa0ed05a9e57cc443a9c49ef38a34f5d, type: 2}
 --- !u!114 &1668519838
 MonoBehaviour:
   m_ObjectHideFlags: 0

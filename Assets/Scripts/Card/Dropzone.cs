@@ -42,7 +42,7 @@ public class Dropzone : MonoBehaviour, IDropHandler
         draggedCardVariable.Card.Resolve(true); // resolving effect itself
 
         if(tutorialStepVariable.Value == 4) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
-        if(tutorialStepVariable.Value == 7) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
+        if(tutorialStepVariable.Value == 6) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
         
         return true;
     }

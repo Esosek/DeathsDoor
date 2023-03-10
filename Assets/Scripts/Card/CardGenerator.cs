@@ -100,9 +100,9 @@ public class CardGenerator : ScriptableObject
         {
             Debug.Log("CardGen: Duplicate effect was generated");
 
-            if(primaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(primaryRoll)); } // extra gold effect
+            if(primaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(primaryRoll, true)); } // extra gold effect
 
-            primaryRoll.SetValue(RollValue(primaryRoll) + primaryRoll.Value);
+            primaryRoll.SetValue(RollValue(primaryRoll, true) + primaryRoll.Value);
             secondaryRoll = primaryRoll;
             return;
         }
@@ -111,12 +111,12 @@ public class CardGenerator : ScriptableObject
 
         secondaryRoll = Instantiate(_effect); // internal store for secondary roll
 
-        if(_secondaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(secondaryRoll)); } // extra gold effect
+        if(_secondaryEffectSource == extraGoldEffect) { newCard.AddGold(RollValue(secondaryRoll, true)); } // extra gold effect
 
-        secondaryRoll.SetValue(RollValue(secondaryRoll));
+        secondaryRoll.SetValue(RollValue(secondaryRoll, true));
     }
 
-    private int RollValue(Effect roll)
+    private int RollValue(Effect roll, bool isSecondary = false)
     {
         int _valueRoll = 0;
 
@@ -133,7 +133,7 @@ public class CardGenerator : ScriptableObject
         // check if the first roll is spender
         if(primaryEffectSource == spendGoldEffect || primaryEffectSource == spendHealthEffect)
         {
-            _valueRoll  =  Mathf.RoundToInt(_valueRoll * 1.5f);
+            if(isSecondary) _valueRoll  =  Mathf.RoundToInt(_valueRoll * 1.45f);
         }
 
         return _valueRoll;

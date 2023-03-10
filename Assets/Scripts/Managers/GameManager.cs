@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EnemyGenerator enemyGen;
     [SerializeField] private Character hero;
     [SerializeField] private GameObject gameBlock;
+    [SerializeField] private IntVariable tutorialStepVariable;
     
     private void Start()
     {
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
     public void OnFightEnd() // is called OnEnemyDied
     {
         deck.ResetToFull();
+        if(tutorialStepVariable.Value == 7) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
     }
 
     public void OnHeroDied() // is called OnHeroDied

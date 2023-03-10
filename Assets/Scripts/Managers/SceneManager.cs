@@ -8,12 +8,9 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject mainCanvas;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private IntVariable tutorialStepVariable;
 
     public void ShowShop() // is called OnEnemyDied event
     {
-        if(tutorialStepVariable.Value == 8) tutorialStepVariable.SetValue(tutorialStepVariable.Value + 1);
-
         mainCanvas.SetActive(false);
         shopCanvas.SetActive(true);
     }
