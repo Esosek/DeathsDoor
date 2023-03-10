@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectValue: 1
   effectArt: {fileID: 21300000, guid: c6aa34ed36480484da3f1befd53d48bb, type: 3}
-  ruleText: +<value> Gold on this Card
+  ruleText: '<b>Play</b>: +<value> Gold on this Card'
   enemy: {fileID: 0}
   hero: {fileID: 0}
   minTierRolls: 01000000020000000300000004000000040000000500000005000000

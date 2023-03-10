@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Drag any card to one of the red areas to play it
+  m_text: 'Drag any card to one of the red areas to play it '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
   m_sharedMaterial: {fileID: -2448733637917295595, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
@@ -3718,8 +3718,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: -47.5}
-  m_SizeDelta: {x: 135, y: 95}
+  m_AnchoredPosition: {x: -48, y: -38.0653}
+  m_SizeDelta: {x: 135, y: 113.8694}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &974124194
 MonoBehaviour:
@@ -3741,7 +3741,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is your deck, you will buy cards and make it stronger
+  m_text: 'This is your deck
+
+
+    If it would be empty, all played cards are shuffled
+    back in'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}
   m_sharedMaterial: {fileID: -2448733637917295595, guid: c98d47f0dd3c4a944afd00d8ff846961, type: 2}

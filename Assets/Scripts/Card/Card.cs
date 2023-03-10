@@ -67,12 +67,13 @@ public class Card : ScriptableObject
     {
         Debug.Log("Card: Resolving effects");
 
+        if(!isPlayed) goldVariable.SetValue(this.Gold + goldVariable.Value); // fist gain gold
+
+        // then proc effects
         foreach (var effect in Effects)
         {
             effect.Resolve(isPlayed);
-        }
-
-        if(!isPlayed) goldVariable.SetValue(this.Gold + goldVariable.Value); // gain gold
+        }        
     }
 
     private void OnEnable() {
