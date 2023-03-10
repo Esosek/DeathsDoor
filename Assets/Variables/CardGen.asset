@@ -73,3 +73,5 @@ MonoBehaviour:
   minGoldValue: 020000000300000004000000040000000500000006000000
   maxGoldValue: 030000000400000005000000060000000600000007000000
   extraGoldEffect: {fileID: 11400000, guid: db56489c82c0c4db6a79d2624691a95a, type: 2}
+  spendGoldEffect: {fileID: 11400000, guid: 782d3af6992fe4bbabd2d8834d7c4f91, type: 2}
+  spendHealthEffect: {fileID: 11400000, guid: 15df8ade2769445549e263b6b5d89660, type: 2}

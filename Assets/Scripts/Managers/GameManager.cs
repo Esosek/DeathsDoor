@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         gameBlock.SetActive(false);
         hero.Reset();
         enemyGen.ResetEnemy();
+        enemyGen.ResetDynamicAttackIncrement();
         killCountVariable.SetValue(0); // reset kill count
         deck.NewRun();
         hand.ClearHand();

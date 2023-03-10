@@ -15,6 +15,8 @@ public class CardGenerator : ScriptableObject
 
     // references for special rules
     [SerializeField] private Effect extraGoldEffect;
+    [SerializeField] private Effect spendGoldEffect;
+    [SerializeField] private Effect spendHealthEffect;
 
     private int tier = 0; // 1 - 5 while last tier can be reached only in some effect combos
     private Effect primaryRoll;
@@ -87,7 +89,7 @@ public class CardGenerator : ScriptableObject
             if(primaryEffectSource.SecondRollHigherTier) tier += 2; // some primary effects upgrades the tier
         }
 
-        // if not limits are applied
+        // if no limits are applied
         else 
         {
             _effectIndex = Random.Range(0, secondaryRollEffects.Count); // get random index from all primary effects
@@ -116,15 +118,24 @@ public class CardGenerator : ScriptableObject
 
     private int RollValue(Effect roll)
     {
+        int _valueRoll = 0;
+
         if(roll.MaxTierRolls.Count == 0) // check if value needs a roll
         {
-            if(roll.MinTierRolls.Count <= tier) return 0;
-            else return roll.MinTierRolls[tier];
+            if(roll.MinTierRolls.Count <= tier) _valueRoll = 0;
+            else _valueRoll = roll.MinTierRolls[tier];
         }
         else // if yes, roll between min and max
         {
-            int _valueRoll = Random.Range(roll.MinTierRolls[tier], roll.MaxTierRolls[tier]);
-            return _valueRoll;
+            _valueRoll = Random.Range(roll.MinTierRolls[tier], roll.MaxTierRolls[tier]);
         }
+        
+        // check if the first roll is spender
+        if(primaryEffectSource == spendGoldEffect || primaryEffectSource == spendHealthEffect)
+        {
+            _valueRoll  =  Mathf.RoundToInt(_valueRoll * 1.5f);
+        }
+
+        return _valueRoll;
     }
 }
