@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectValue: 0
   effectArt: {fileID: 21300000, guid: b7b8bed70318194438c6c3a8fb767e8e, type: 3}
-  ruleText: Extra Gold
+  ruleText: Has extra Gold
   enemy: {fileID: 0}
   hero: {fileID: 0}
   minTierRolls: 0200000003000000040000000500000006000000

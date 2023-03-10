@@ -17,7 +17,7 @@ MonoBehaviour:
   ruleText: '<b>Sell</b>: +<value> Gold on this Card'
   enemy: {fileID: 0}
   hero: {fileID: 0}
-  minTierRolls: 01000000020000000300000004000000040000000500000005000000
+  minTierRolls: 01000000010000000200000002000000030000000400000004000000
   maxTierRolls: 
   secondRollPool: []
   secondRollHigherTier: 0
